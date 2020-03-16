@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="dark">
+    <ion-title class="ion-text-center">Lista de Doramas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item *ngFor="let doramas of doramas" [routerLink]="['./',doramas.id]">
+    <ion-avatar slot="start">
+      <ion-img [src]="doramas.imageUrl"></ion-img>
+    </ion-avatar>
+    <ion-label>{{doramas.titulo}}</ion-label>
+  </ion-item>
+</ion-list>
+</ion-content>
